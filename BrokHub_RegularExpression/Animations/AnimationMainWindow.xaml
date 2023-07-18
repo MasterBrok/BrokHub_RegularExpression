@@ -1,0 +1,189 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--String-->
+    <!--Brok Hub-->
+    <Storyboard
+        x:Key="StringAnimation_BrokHub"
+        >
+        <StringAnimationUsingKeyFrames
+            Storyboard.TargetProperty="Text"
+            AutoReverse="True"
+            FillBehavior="Stop"
+            RepeatBehavior="Forever"
+            >
+            <DiscreteStringKeyFrame Value="B" KeyTime="0:0:1"/>
+            <DiscreteStringKeyFrame Value="Br" KeyTime="0:0:1.4"/>
+            <DiscreteStringKeyFrame Value="Bro" KeyTime="0:0:1.8"/>
+            <DiscreteStringKeyFrame Value="Brok" KeyTime="0:0:2.2"/>
+            <DiscreteStringKeyFrame Value="Brok H" KeyTime="0:0:2.6"/>
+            <DiscreteStringKeyFrame Value="Brok Hu" KeyTime="0:0:3"/>
+            <DiscreteStringKeyFrame Value="Brok Hub" KeyTime="0:0:3.4"/>
+            <DiscreteStringKeyFrame Value="Brok Hub" KeyTime="0:0:3.6"/>
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <!--String-->
+    <!--Regular Expression World-->
+    <Storyboard
+        x:Key="StringAnimation_SubBrokHub"
+        >
+        <StringAnimationUsingKeyFrames
+            Storyboard.TargetProperty="Text"
+            AutoReverse="True"
+            RepeatBehavior="Forever"
+            >
+            <DiscreteStringKeyFrame Value="R"                              KeyTime="0:0:0:1"   />
+            <DiscreteStringKeyFrame Value="Re"                             KeyTime="0:0:0:1.1"/>
+            <DiscreteStringKeyFrame Value="Reg"                            KeyTime="0:0:0:1.2"/>
+            <DiscreteStringKeyFrame Value="Regu"                           KeyTime="0:0:0:1.3"/>
+            <DiscreteStringKeyFrame Value="Regul"                          KeyTime="0:0:0:1.4"/>
+            <DiscreteStringKeyFrame Value="Regula"                         KeyTime="0:0:0:1.5"  />
+            <DiscreteStringKeyFrame Value="Regular"                        KeyTime="0:0:0:1.6"/>
+            <DiscreteStringKeyFrame Value="Regular E"                      KeyTime="0:0:0:1.7"/>
+            <DiscreteStringKeyFrame Value="Regular Ex"                     KeyTime="0:0:0:1.8"/>
+            <DiscreteStringKeyFrame Value="Regular Exp"                    KeyTime="0:0:0:1.9"/>
+            <DiscreteStringKeyFrame Value="Regular Expr"                   KeyTime="0:0:0:2"/>
+            <DiscreteStringKeyFrame Value="Regular Expre"                  KeyTime="0:0:0:2.1"/>
+            <DiscreteStringKeyFrame Value="Regular Expres"                 KeyTime="0:0:0:2.2"/>
+            <DiscreteStringKeyFrame Value="Regular Express"                KeyTime="0:0:0:2.3"/>
+            <DiscreteStringKeyFrame Value="Regular Expressi"               KeyTime="0:0:0:2.4"/>
+            <DiscreteStringKeyFrame Value="Regular Expressio"              KeyTime="0:0:0:2.5"/>
+            <DiscreteStringKeyFrame Value="Regular Expression"             KeyTime="0:0:0:2.6"/>
+            <DiscreteStringKeyFrame Value="Regular Expression W"           KeyTime="0:0:0:2.7"/>
+            <DiscreteStringKeyFrame Value="Regular Expression Wo"          KeyTime="0:0:0:2.8"/>
+            <DiscreteStringKeyFrame Value="Regular Expression Wor"         KeyTime="0:0:0:2.9"/>
+            <DiscreteStringKeyFrame Value="Regular Expression Worl"        KeyTime="0:0:0:3"/>
+            <DiscreteStringKeyFrame Value="Regular Expression World"       KeyTime="0:0:0:3.1"/>
+            <DiscreteStringKeyFrame Value="Regular Expression World"       KeyTime="0:0:0:3.4"/>
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <!--Strign-->
+    <!--Hi, I'm Brok, and this app belongs to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreciate it.-->
+    <Storyboard x:Key="StringAnimation_DeveloperInfo">
+        <StringAnimationUsingKeyFrames
+            Storyboard.TargetProperty="Text"
+            AutoReverse="True"
+            RepeatBehavior="Forever"
+            >
+            <DiscreteStringKeyFrame KeyTime="0:0:0" Value="H" />
+            <DiscreteStringKeyFrame KeyTime="0:0:0.2" Value="Hi" />
+            <DiscreteStringKeyFrame KeyTime="0:0:0.4" Value="Hi," />
+            <DiscreteStringKeyFrame KeyTime="0:0:0.6" Value="Hi, I" />
+            <DiscreteStringKeyFrame KeyTime="0:0:0.8" Value="Hi, I'm" />
+            <DiscreteStringKeyFrame KeyTime="0:0:1.0" Value="Hi, I'm " />
+            <DiscreteStringKeyFrame KeyTime="0:0:1.2" Value="Hi, I'm B" />
+            <DiscreteStringKeyFrame KeyTime="0:0:1.4" Value="Hi, I'm Br" />
+            <DiscreteStringKeyFrame KeyTime="0:0:1.6" Value="Hi, I'm Bro" />
+            <DiscreteStringKeyFrame KeyTime="0:0:1.8" Value="Hi, I'm Brok" />
+            <DiscreteStringKeyFrame KeyTime="0:0:2.0" Value="Hi, I'm Brok," />
+            <DiscreteStringKeyFrame KeyTime="0:0:2.2" Value="Hi, I'm Brok, " />
+            <DiscreteStringKeyFrame KeyTime="0:0:2.4" Value="Hi, I'm Brok, a" />
+            <DiscreteStringKeyFrame KeyTime="0:0:2.6" Value="Hi, I'm Brok, an" />
+            <DiscreteStringKeyFrame KeyTime="0:0:2.8" Value="Hi, I'm Brok, and" />
+            <DiscreteStringKeyFrame KeyTime="0:0:3.0" Value="Hi, I'm Brok, and " />
+            <DiscreteStringKeyFrame KeyTime="0:0:3.2" Value="Hi, I'm Brok, and t" />
+            <DiscreteStringKeyFrame KeyTime="0:0:3.4" Value="Hi, I'm Brok, and th" />
+            <DiscreteStringKeyFrame KeyTime="0:0:3.6" Value="Hi, I'm Brok, and thi" />
+            <DiscreteStringKeyFrame KeyTime="0:0:3.8" Value="Hi, I'm Brok, and this" />
+            <DiscreteStringKeyFrame KeyTime="0:0:4.0" Value="Hi, I'm Brok, and this " />
+            <DiscreteStringKeyFrame KeyTime="0:0:4.2" Value="Hi, I'm Brok, and this a" />
+            <DiscreteStringKeyFrame KeyTime="0:0:4.4" Value="Hi, I'm Brok, and this app" />
+            <DiscreteStringKeyFrame KeyTime="0:0:4.6" Value="Hi, I'm Brok, and this app " />
+            <DiscreteStringKeyFrame KeyTime="0:0:4.8" Value="Hi, I'm Brok, and this app b" />
+            <DiscreteStringKeyFrame KeyTime="0:0:5.0" Value="Hi, I'm Brok, and this app be" />
+            <DiscreteStringKeyFrame KeyTime="0:0:5.2" Value="Hi, I'm Brok, and this app bel" />
+            <DiscreteStringKeyFrame KeyTime="0:0:5.4" Value="Hi, I'm Brok, and this app belo" />
+            <DiscreteStringKeyFrame KeyTime="0:0:5.6" Value="Hi, I'm Brok, and this app belong" />
+            <DiscreteStringKeyFrame KeyTime="0:0:5.8" Value="Hi, I'm Brok, and this app belong " />
+            <DiscreteStringKeyFrame KeyTime="0:0:6.0" Value="Hi, I'm Brok, and this app belong t" />
+            <DiscreteStringKeyFrame KeyTime="0:0:6.2" Value="Hi, I'm Brok, and this app belong to" />
+            <DiscreteStringKeyFrame KeyTime="0:0:6.4" Value="Hi, I'm Brok, and this app belong to " />
+            <DiscreteStringKeyFrame KeyTime="0:0:6.6" Value="Hi, I'm Brok, and this app belong to t" />
+            <DiscreteStringKeyFrame KeyTime="0:0:6.8" Value="Hi, I'm Brok, and this app belong to th" />
+            <DiscreteStringKeyFrame KeyTime="0:0:7.0" Value="Hi, I'm Brok, and this app belong to the" />
+            <DiscreteStringKeyFrame KeyTime="0:0:7.2" Value="Hi, I'm Brok, and this app belong to the " />
+            <DiscreteStringKeyFrame KeyTime="0:0:7.4" Value="Hi, I'm Brok, and this app belong to the B" />
+            <DiscreteStringKeyFrame KeyTime="0:0:7.6" Value="Hi, I'm Brok, and this app belong to the Br" />
+            <DiscreteStringKeyFrame KeyTime="0:0:7.8" Value="Hi, I'm Brok, and this app belong to the Bro" />
+            <DiscreteStringKeyFrame KeyTime="0:0:8.0" Value="Hi, I'm Brok, and this app belong to the Brok" />
+            <DiscreteStringKeyFrame KeyTime="0:0:8.2" Value="Hi, I'm Brok, and this app belong to the BrokH" />
+            <DiscreteStringKeyFrame KeyTime="0:0:8.4" Value="Hi, I'm Brok, and this app belong to the BrokHu" />
+            <DiscreteStringKeyFrame KeyTime="0:0:8.6" Value="Hi, I'm Brok, and this app belong to the BrokHub" />
+            <DiscreteStringKeyFrame KeyTime="0:0:8.8" Value="Hi, I'm Brok, and this app belong to the BrokHub " />
+            <DiscreteStringKeyFrame KeyTime="0:0:9.0" Value="Hi, I'm Brok, and this app belong to the BrokHub f" />
+            <DiscreteStringKeyFrame KeyTime="0:0:9.2" Value="Hi, I'm Brok, and this app belong to the BrokHub fa" />
+            <DiscreteStringKeyFrame KeyTime="0:0:9.4" Value="Hi, I'm Brok, and this app belong to the BrokHub fam" />
+            <DiscreteStringKeyFrame KeyTime="0:0:9.6" Value="Hi, I'm Brok, and this app belong to the BrokHub famil" />
+            <DiscreteStringKeyFrame KeyTime="0:0:9.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family" />
+            <DiscreteStringKeyFrame KeyTime="0:0:10.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family." />
+            <DiscreteStringKeyFrame KeyTime="0:0:10.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. I" />
+            <DiscreteStringKeyFrame KeyTime="0:0:10.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It" />
+            <DiscreteStringKeyFrame KeyTime="0:0:10.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It'" />
+            <DiscreteStringKeyFrame KeyTime="0:0:10.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's" />
+            <DiscreteStringKeyFrame KeyTime="0:0:11.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's " />
+            <DiscreteStringKeyFrame KeyTime="0:0:11.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's t" />
+            <DiscreteStringKeyFrame KeyTime="0:0:11.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's th" />
+            <DiscreteStringKeyFrame KeyTime="0:0:11.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the" />
+            <DiscreteStringKeyFrame KeyTime="0:0:11.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the " />
+            <DiscreteStringKeyFrame KeyTime="0:0:12.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the f" />
+            <DiscreteStringKeyFrame KeyTime="0:0:12.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the fi" />
+            <DiscreteStringKeyFrame KeyTime="0:0:12.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the fir" />
+            <DiscreteStringKeyFrame KeyTime="0:0:12.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the firs" />
+            <DiscreteStringKeyFrame KeyTime="0:0:12.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first" />
+            <DiscreteStringKeyFrame KeyTime="0:0:13.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first " />
+            <DiscreteStringKeyFrame KeyTime="0:0:13.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first a" />
+            <DiscreteStringKeyFrame KeyTime="0:0:13.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first ap" />
+            <DiscreteStringKeyFrame KeyTime="0:0:13.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app" />
+            <DiscreteStringKeyFrame KeyTime="0:0:13.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app " />
+            <DiscreteStringKeyFrame KeyTime="0:0:14.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app o" />
+            <DiscreteStringKeyFrame KeyTime="0:0:14.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on" />
+            <DiscreteStringKeyFrame KeyTime="0:0:14.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on t" />
+            <DiscreteStringKeyFrame KeyTime="0:0:14.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on th" />
+            <DiscreteStringKeyFrame KeyTime="0:0:14.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the " />
+            <DiscreteStringKeyFrame KeyTime="0:0:15.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the li" />
+            <DiscreteStringKeyFrame KeyTime="0:0:15.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the li" />
+            <DiscreteStringKeyFrame KeyTime="0:0:15.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list" />
+            <DiscreteStringKeyFrame KeyTime="0:0:15.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. T" />
+            <DiscreteStringKeyFrame KeyTime="0:0:15.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Tha" />
+            <DiscreteStringKeyFrame KeyTime="0:0:16.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank" />
+            <DiscreteStringKeyFrame KeyTime="0:0:16.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you" />
+            <DiscreteStringKeyFrame KeyTime="0:0:16.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you s" />
+            <DiscreteStringKeyFrame KeyTime="0:0:16.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so" />
+            <DiscreteStringKeyFrame KeyTime="0:0:16.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so " />
+            <DiscreteStringKeyFrame KeyTime="0:0:17.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so m" />
+            <DiscreteStringKeyFrame KeyTime="0:0:17.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so mu" />
+            <DiscreteStringKeyFrame KeyTime="0:0:17.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so muc" />
+            <DiscreteStringKeyFrame KeyTime="0:0:17.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much" />
+            <DiscreteStringKeyFrame KeyTime="0:0:17.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much " />
+            <DiscreteStringKeyFrame KeyTime="0:0:18.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much f" />
+            <DiscreteStringKeyFrame KeyTime="0:0:18.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for" />
+            <DiscreteStringKeyFrame KeyTime="0:0:18.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for " />
+            <DiscreteStringKeyFrame KeyTime="0:0:18.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for y" />
+            <DiscreteStringKeyFrame KeyTime="0:0:18.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for yo" />
+            <DiscreteStringKeyFrame KeyTime="0:0:19.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your" />
+            <DiscreteStringKeyFrame KeyTime="0:0:19.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your s" />
+            <DiscreteStringKeyFrame KeyTime="0:0:19.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your su" />
+            <DiscreteStringKeyFrame KeyTime="0:0:19.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your sup" />
+            <DiscreteStringKeyFrame KeyTime="0:0:19.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your supp" />
+            <DiscreteStringKeyFrame KeyTime="0:0:20.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support" />
+            <DiscreteStringKeyFrame KeyTime="0:0:20.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support;" />
+            <DiscreteStringKeyFrame KeyTime="0:0:20.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; " />
+            <DiscreteStringKeyFrame KeyTime="0:0:20.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I" />
+            <DiscreteStringKeyFrame KeyTime="0:0:20.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I tr" />
+            <DiscreteStringKeyFrame KeyTime="0:0:21.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I trul" />
+            <DiscreteStringKeyFrame KeyTime="0:0:21.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly" />
+            <DiscreteStringKeyFrame KeyTime="0:0:21.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly a" />
+            <DiscreteStringKeyFrame KeyTime="0:0:21.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly ap" />
+            <DiscreteStringKeyFrame KeyTime="0:0:21.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appr" />
+            <DiscreteStringKeyFrame KeyTime="0:0:22.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appre" />
+            <DiscreteStringKeyFrame KeyTime="0:0:22.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly apprec" />
+            <DiscreteStringKeyFrame KeyTime="0:0:22.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreci" />
+            <DiscreteStringKeyFrame KeyTime="0:0:22.6" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly apprecia" />
+            <DiscreteStringKeyFrame KeyTime="0:0:22.8" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreciat" />
+            <DiscreteStringKeyFrame KeyTime="0:0:23.0" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreciate" />
+            <DiscreteStringKeyFrame KeyTime="0:0:23.2" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreciate i" />
+            <DiscreteStringKeyFrame KeyTime="0:0:23.4" Value="Hi, I'm Brok, and this app belong to the BrokHub family. It's the first app on the list. Thank you so much for your support; I truly appreciate it" />
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+</ResourceDictionary>
