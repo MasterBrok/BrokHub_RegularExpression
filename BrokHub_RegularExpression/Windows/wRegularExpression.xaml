@@ -5,13 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrokHub_RegularExpression.Windows"
         mc:Ignorable="d"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="CanResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}}"
         Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}"
         >
     <Border
+        CornerRadius="30"
+        Background="{StaticResource bgRegularWindow}"
         >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Margin="10"
+                Background="Red">
 
+            </StackPanel>
+        </Grid>
     </Border>
 </Window>

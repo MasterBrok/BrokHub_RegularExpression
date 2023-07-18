@@ -15,13 +15,18 @@ using System.Windows.Shapes;
 namespace BrokHub_RegularExpression.Windows
 {
     /// <summary>
-    /// Interaction logic for wMain.xaml
+    /// Interaction logic for wMainPage.xaml
     /// </summary>
-    public partial class wMain : Window
+    public partial class wMainPage : Window
     {
-        public wMain()
+        public wMainPage()
         {
             InitializeComponent();
+        }
+
+        private void wn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

@@ -8,16 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Images\Developer\Brok.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Paths\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Images\Developer\Brok.jpg" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
   </ItemGroup>
 
 </Project>
