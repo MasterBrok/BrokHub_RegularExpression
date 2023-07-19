@@ -41,4 +41,17 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <Style TargetType="StatusBar" >
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="StatusBar">
+                    <Border Background="{DynamicResource bgg2Main}" CornerRadius="0 0 10 10"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

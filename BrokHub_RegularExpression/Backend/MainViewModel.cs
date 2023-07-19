@@ -6,6 +6,7 @@ using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Policy;
 using System.Windows;
 using System.Windows.Input;
 
@@ -24,6 +25,7 @@ namespace BrokHub_RegularExpression.Backend
 
         private ICommand _cmdChangeSourcePage;
         private ICommand _cmdOpenWindow;
+        private ICommand _cmdPopup;
         #endregion
 
         #region All Public Property
@@ -50,6 +52,27 @@ namespace BrokHub_RegularExpression.Backend
             }
         }
 
+        public ICommand CmdPopup
+        {
+            get
+            {
+                if (_cmdPopup == null)
+                    _cmdPopup = new RelayCommand(Popup_MouseDown, CnaPopup_MouseDown);
+                return _cmdPopup;
+            }
+        }
+
+        private bool CnaPopup_MouseDown(object obj)
+        {
+            return true;
+        }
+
+        private void Popup_MouseDown(object obj)
+        {
+            wMainPage page = (obj as wMainPage);
+            page.DragMove();
+        }
+
         public ICommand CmdOpenWiundow
         {
             get
@@ -60,7 +83,7 @@ namespace BrokHub_RegularExpression.Backend
             }
         }
 
-        #endregion
+        #endregion 
 
         #region All Function
 

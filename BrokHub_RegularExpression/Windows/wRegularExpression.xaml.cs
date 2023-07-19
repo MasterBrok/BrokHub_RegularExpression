@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace BrokHub_RegularExpression.Windows
         public wRegularExpression()
         {
             InitializeComponent();
+            //ll.ItemsSource = new Data.ListData().list;
         }
     }
 }

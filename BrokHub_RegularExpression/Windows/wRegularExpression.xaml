@@ -4,29 +4,97 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrokHub_RegularExpression.Windows"
+        xmlns:dd="clr-namespace:BrokHub_RegularExpression.BrokData"
+        xmlns:ba="clr-namespace:BrokHub_RegularExpression.Backend"
+        xmlns:con="clr-namespace:BrokHub_RegularExpression.Converters"
+        xmlns:button="clr-namespace:BrokHub_RegularExpression.Controls.Buttons"
         mc:Ignorable="d"
+        x:Name="wr"
+        xmlns:cc="clr-namespace:BrokHub_RegularExpression.Controls.ControlListBox" xmlns:i1="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:re="clr-namespace:BrokHub_RegularExpression.Controls.ControlRegex"
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="CanResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}}"
+        Height="700"
         Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}"
         >
+    <Window.DataContext>
+        <ba:RegularExpressionViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <con:ConvertParameters x:Key="co"/>
+    </Window.Resources>
     <Border
         CornerRadius="30"
         Background="{StaticResource bgRegularWindow}"
         >
-        <Grid>
+        <Grid >
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="8*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel
-                Margin="10"
-                Background="Red">
+            <cc:ccListBox
+                Grid.Row="0"
+                x:Name="listBoxSource"
+                ItemsSource="{Binding ListTitleIltem}"
+                >
 
-            </StackPanel>
+            </cc:ccListBox>
+            <button:ccButtonMain VerticalAlignment="Top"
+                                 Grid.Column="0"
+                                 Content="Find"
+                                 Margin="0 50 0 0"
+                                 Width="120"
+                                 Height="30"
+                                 Command="{Binding CmdReadTitle}"
+                                 >
+                <button:ccButtonMain.CommandParameter>
+                    <MultiBinding Converter="{StaticResource co}">
+                        <Binding ElementName="listBoxSource"/>
+                        <Binding ElementName="spSubRegexs" />
+                    </MultiBinding>
+                </button:ccButtonMain.CommandParameter>
+            </button:ccButtonMain>
+
+
+
+
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Hidden"
+                          >
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Grid>
+                        <re:ccRegex RegexTitle="{Binding Regex.Title}"
+                                    RegexDescription="{Binding Regex.Description}"
+                                    />
+                    </Grid>
+
+
+                    <StackPanel Grid.Row="1" x:Name="spSubRegexs"
+                                >
+                        <re:ccSubRegex/>
+                    </StackPanel>
+
+
+
+                </Grid>
+            </ScrollViewer>
+
+
+
+
+
         </Grid>
     </Border>
 </Window>
