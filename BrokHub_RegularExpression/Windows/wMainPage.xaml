@@ -26,7 +26,6 @@
         CornerRadius="30"
         >
         <Grid >
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="10*"/>
@@ -36,7 +35,21 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <StackPanel  Grid.Column="2"
+                        VerticalAlignment="Center" Orientation="Horizontal">
 
+                <ccButton:ccButtonMain
+                    Width="40" Height="20"
+                    ToolTip="Hide"
+                    Command="{Binding CmdHide}" CommandParameter="{Binding ElementName=wn}"
+                    />
+                <ccButton:ccButtonMain
+                    Margin="10"
+                    Width="40" Height="20"
+                    ToolTip="Exit"
+                    Command="{Binding CmdClose}" CommandParameter="{Binding ElementName=wn}"
+                    />
+            </StackPanel>
             <StatusBar
                 Grid.Column="1"
                 VerticalAlignment="Top"
@@ -44,11 +57,9 @@
                 x:Name="stTop"
                 >
                 <StatusBar.InputBindings>
-                    <MouseBinding Command="{Binding CmdPopup}" CommandParameter="{Binding ElementName=wn}"/>
+                    <MouseBinding Command="{Binding CmdPopup}" MouseAction="LeftClick" CommandParameter="{Binding ElementName=wn}"/>
                 </StatusBar.InputBindings>
             </StatusBar>
-
-
             <ccManu:ccMenu
                 Grid.Column="1" Margin="10"
                 >
@@ -63,7 +74,6 @@
                                    CommandParameter="{Binding ElementName=miDeveloper}"
                                    />
             </ccManu:ccMenu>
-
             <Frame
                 x:Name="frmMain"
                 Grid.Row="1"
@@ -81,8 +91,6 @@
                 Command="{Binding CmdOpenWiundow}"
                 CommandParameter="{Binding ElementName=wn}"
                 />
-
-
             <Ellipse
                 Grid.Column="1"
                 Fill="{StaticResource bgg2Main}"
@@ -94,7 +102,6 @@
                     <BlurEffect Radius="80" KernelType="Box"/>
                 </Ellipse.Effect>
             </Ellipse>
-
             <Rectangle
                 Grid.Row="1"
                 Grid.Column="1"
@@ -126,8 +133,6 @@
                 Background="#E4ACD0"
                 >
             </Border>
-
-
         </Grid>
     </Border>
 </Window>

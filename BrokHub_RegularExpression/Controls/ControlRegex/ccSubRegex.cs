@@ -1,15 +1,28 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace BrokHub_RegularExpression.Controls.ControlRegex
 {
-    
+
     public class ccSubRegex : Control
     {
         static ccSubRegex()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ccSubRegex), new FrameworkPropertyMetadata(typeof(ccSubRegex)));
         }
+
+        public ICommand CommandCopyRegex
+        {
+            get { return (ICommand)GetValue(CommandCopyRegexProperty); }
+            set { SetValue(CommandCopyRegexProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CommandCopyRegex.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CommandCopyRegexProperty =
+            DependencyProperty.Register("CommandCopyRegex", typeof(ICommand), typeof(ccSubRegex), new PropertyMetadata(default));
+
+
 
         public string RegexSubTitle
         {

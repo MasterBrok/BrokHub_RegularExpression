@@ -9,34 +9,25 @@ namespace BrokHub_RegularExpression.BrokData
         {
             new Regex(){Code = 1 , Title="Email",Description="Email Regex",SubRegex=EmailSub},
             new Regex(){Code = 2 , Title="PhoneNumber",Description="PhoneNumber Regex",SubRegex=PhoneNumberSub},
-            new Regex(){Code = 3 , Title="Name",Description="Name Regex",SubRegex=NameSub},
             new Regex(){Code = 4 , Title="Url",Description="Url Regex",SubRegex=UrlSub}
         };
-        public static List<SubRegex> EmailSub = new List<SubRegex>()
-        {
-            new SubRegex(1,"E1","E1","E1"),
-            new SubRegex(1,"E2","E2","E2"),
-            new SubRegex(1,"E3","E3","E3"),
-            new SubRegex(1,"E4","E4","E4")
-        };
-        public static List<SubRegex> PhoneNumberSub = new List<SubRegex>()
-        {
-            new SubRegex(2,"P1","P1","P1"),
-            new SubRegex(2,"P2","P2","P2"),
-            new SubRegex(2,"P3","P3","P3"),
-        };
 
-        public static List<SubRegex> NameSub = new List<SubRegex>()
+        private static List<SubRegex> EmailSub = new List<SubRegex>()
         {
-            new SubRegex(3,"N1","N1","N1"),
-            new SubRegex(3,"N2","N2","N2"),
-            new SubRegex(3,"N3","N3","N3")
+            new SubRegex(1,"Email Pattern 1","Matches email addresses.","^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"),
+            new SubRegex(1,"Email Pattern 2","Matches email addresses `with` subdomains.","^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}$"),
+            new SubRegex(1,"Email Pattern 3","Matches email addresses with two to five-letter top-level domains. ","^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,5}$"),
+            new SubRegex(1,"Email Pattern 4","Matches email addresses with common top-level domains (com, net, org, io, edu, gov).","^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(com|net|org|io|edu|gov)$")
         };
-        public static List<SubRegex> UrlSub = new List<SubRegex>()
+        private static List<SubRegex> PhoneNumberSub = new List<SubRegex>()
         {
-            new SubRegex(4,"U1","U1","U1"),
-            new SubRegex(4,"U2","U2","U2"),
-            new SubRegex(4,"U3","U3","U3")
+            new SubRegex(2,"Mobile Number Pattern 1","Matches Iranian mobile numbers starting with 09 followed by nine digits.","^09\\d{9}$"),
+            new SubRegex(2,"Mobile Number Pattern 2","Matches Iranian mobile numbers in international format starting with +989 followed by nine digits.","^\\+989\\d{9}$"),
+        };
+        private static List<SubRegex> UrlSub = new List<SubRegex>()
+        {
+            new SubRegex(4,"URL Pattern 2","Matches internet URLs starting with \"http://\" or \"https://\" or \"ftp://\" and must contain at least one character after the domain name with no white spaces.","^(https?|ftp)://[^\\s/$.?#].[^\\s]*$"),
+            new SubRegex(4,"URL Pattern 3","Matches internet URLs starting with \"http://\" or \"https://\" and must contain at least one character after the domain name with optional path after the domain.","^https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}(/[^\\s]*)?$")
         };
     }
 }

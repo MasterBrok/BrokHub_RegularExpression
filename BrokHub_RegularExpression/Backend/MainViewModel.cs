@@ -16,7 +16,6 @@ namespace BrokHub_RegularExpression.Backend
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-
         #region All Private Property
         private Uri _sourcePage = new Uri("\\Pages\\Home.xaml", UriKind.Relative);
         #endregion
@@ -26,6 +25,8 @@ namespace BrokHub_RegularExpression.Backend
         private ICommand _cmdChangeSourcePage;
         private ICommand _cmdOpenWindow;
         private ICommand _cmdPopup;
+        private ICommand _cmdClose;
+        private ICommand _cmdHide;
         #endregion
 
         #region All Public Property
@@ -61,6 +62,24 @@ namespace BrokHub_RegularExpression.Backend
                 return _cmdPopup;
             }
         }
+        public ICommand CmdClose
+        {
+            get
+            {
+                if (_cmdClose == null)
+                    _cmdClose = new RelayCommand(Close_MouseClick, CnaClose_MouseClick);
+                return _cmdClose;
+            }
+        }
+        public ICommand CmdHide
+        {
+            get
+            {
+                if (_cmdHide == null)
+                    _cmdHide= new RelayCommand(Hide_MouseClick, CanHide_MouseClick);
+                return _cmdHide;
+            }
+        }
 
         private bool CnaPopup_MouseDown(object obj)
         {
@@ -83,9 +102,33 @@ namespace BrokHub_RegularExpression.Backend
             }
         }
 
-        #endregion 
+        #endregion
 
         #region All Function
+
+        private bool CnaClose_MouseClick(object obj)
+        {
+            return true;
+        }
+
+        private void Close_MouseClick(object obj)
+        {
+            wMainPage page = (obj as wMainPage);
+            Application.Current.Shutdown();
+            page.Close();
+        }
+
+        private bool CanHide_MouseClick(object obj)
+        {
+            return true;
+        }
+
+        private void Hide_MouseClick(object obj)
+        {
+            wMainPage page = (obj as wMainPage);
+            page.WindowState = WindowState.Minimized;
+        }
+
 
 
         private bool CanDrogMove_MouseDown(object obj)

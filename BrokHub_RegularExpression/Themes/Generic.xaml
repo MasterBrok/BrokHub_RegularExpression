@@ -67,7 +67,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
     <Style TargetType="{x:Type cMenu:ccMenuItem}" >
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -110,7 +109,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
     <Style TargetType="{x:Type clistBox:ccListBox}">
         <Setter Property="Margin" Value="10"/>
         <Setter Property="BorderBrush" Value="#6D667D"/>
@@ -141,7 +139,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
     <Style TargetType="{x:Type regex:ccRegex}">
         <Setter Property="Template">
             <Setter.Value>
@@ -165,15 +162,19 @@
                                         >
                                 <TextBlock Text="Title : "
                                            />
-                                <TextBlock Text="{TemplateBinding RegexTitle}" Foreground="LightSlateGray" FontSize="15"
+                                <TextBlock Text="{TemplateBinding RegexTitle}"
+                                           Foreground="LightSlateGray" FontSize="15"
                                            />
                             </StackPanel>
                             <StackPanel
-                                Width="560"
-                                HorizontalAlignment="Right"
+                                HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
                                 <TextBlock Text="Description"/>
-                                <TextBlock Text="{TemplateBinding RegexDescription}" Foreground="LightSlateGray" FontSize="15"/>
+                                <TextBlock
+                                    Text="{TemplateBinding RegexDescription}"
+                                    Foreground="LightSlateGray"
+                                    FontSize="15"
+                                    />
                             </StackPanel>
                         </Grid>
                     </Border>
@@ -181,8 +182,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
     <Style TargetType="{x:Type regex:ccSubRegex}">
         <Setter Property="Height" Value="80"/>
         <Setter Property="BorderBrush" Value="LightCyan"/>
@@ -198,27 +197,47 @@
                             CornerRadius="10"
                             >
                         <Grid>
-                            <StackPanel Width="420" HorizontalAlignment="Left" VerticalAlignment="Center">
-                                <TextBlock Text="{TemplateBinding RegexSubTitle}" Foreground="#C6ADAD" Padding="{TemplateBinding Padding}"/>
-                                <TextBlock Text="{TemplateBinding RegexSubDescription}" Margin="2 22 0 0" Foreground="#C6ADAD" Padding="{TemplateBinding Padding}"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="400"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Width="420"  Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <TextBlock Text="{TemplateBinding RegexSubTitle}"
+                                           Foreground="#C6ADAD"
+                                           VerticalAlignment="Top"
+                                           Padding="{TemplateBinding Padding}"/>
+                                <TextBlock Text="{TemplateBinding RegexSubDescription}"
+                                           TextWrapping="Wrap"
+                                           VerticalAlignment="Bottom"
+                                           Foreground="#9D6969"
+                                           Padding="{TemplateBinding Padding}"/>
                             </StackPanel>
-                            <StackPanel VerticalAlignment="Center"
-                                        HorizontalAlignment="Right"
-                                        Width="400"
-                                        Margin="0 0 50 0"
-                                        >
-                                <TextBox Text="{TemplateBinding RegexSubSource}"/>
-                            </StackPanel>
+
+                            <button:ccButtonMain Width="20" Grid.Column="2" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                                 Margin="20 0 10 0"
+                                                 Command="{TemplateBinding CommandCopyRegex}"
+                                                 CommandParameter="{Binding ElementName=tbSource}"
+                                                 />
+
+                            <Grid VerticalAlignment="Center" Grid.Column="1"
+                                  HorizontalAlignment="Right"
+                                  >
+                                <TextBlock
+                                    x:Name="tbSource"
+                                    FontFamily="{DynamicResource Font2}"
+                                    Foreground="#48B678"
+                                    FontWeight="Regular"
+                                    Text="{TemplateBinding RegexSubSource}"
+                                    />
+                            </Grid>
                         </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-
     <!--Move in App.xaml-->
-
     <!--<Style TargetType="{x:Type clistBox:ccListBoxItem}" >
     <Setter Property="Width" Value="170"/>
     <Setter Property="Height" Value="25"/>
@@ -255,6 +274,4 @@
     </Setter.Value>
     </Setter>
     </Style>-->
-
-
 </ResourceDictionary>

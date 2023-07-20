@@ -31,7 +31,6 @@
         Background="{StaticResource bgRegularWindow}"
         >
         <Grid >
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="8*"/>
@@ -58,10 +57,6 @@
                     </MultiBinding>
                 </button:ccButtonMain.CommandParameter>
             </button:ccButtonMain>
-
-
-
-
             <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Hidden"
                           >
@@ -77,24 +72,38 @@
                     <Grid>
                         <re:ccRegex RegexTitle="{Binding Regex.Title}"
                                     RegexDescription="{Binding Regex.Description}"
+
                                     />
                     </Grid>
 
 
                     <StackPanel Grid.Row="1" x:Name="spSubRegexs"
                                 >
-                        <re:ccSubRegex/>
+                        <re:ccSubRegex />
                     </StackPanel>
 
 
 
                 </Grid>
             </ScrollViewer>
+            <StackPanel  Grid.Column="2"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal"
+                        Margin="10">
 
-
-
-
-
+                <button:ccButtonMain
+                    Width="40" Height="20"
+                    ToolTip="Hide"
+                    Command="{Binding CmdHide}" CommandParameter="{Binding ElementName=wr}"
+                    />
+                <button:ccButtonMain
+                    Margin="10"
+                    Width="40" Height="20"
+                    ToolTip="Exit"
+                    Command="{Binding CmdClose}" CommandParameter="{Binding ElementName=wr}"
+                    />
+            </StackPanel>
         </Grid>
     </Border>
 </Window>

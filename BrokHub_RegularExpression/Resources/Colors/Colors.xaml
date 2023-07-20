@@ -5,16 +5,8 @@
     <SolidColorBrush x:Key="bgg2Main">#E7C9D1</SolidColorBrush>
     <SolidColorBrush x:Key="fgContentMain">#1B2625</SolidColorBrush>
     <SolidColorBrush x:Key="bgButtonMain" Color="#39AAA6"/>
-
-
     <SolidColorBrush x:Key="bgRegularWindow" >#2A2438</SolidColorBrush>
     <SolidColorBrush x:Key="bgItemRegularWindow" >#352F44</SolidColorBrush>
     <SolidColorBrush x:Key="fgContentItemRegularWindow" >#5C5470</SolidColorBrush>
     <SolidColorBrush x:Key="fgContentPageRegularWindow" >#DBD8E3</SolidColorBrush>
-
-
-
-
-
-
 </ResourceDictionary>

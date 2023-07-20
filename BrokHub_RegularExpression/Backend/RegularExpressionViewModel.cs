@@ -11,6 +11,8 @@ using System.Windows.Controls;
 using System.Windows;
 using BrokHub_RegularExpression.BrokData;
 using BrokHub_RegularExpression.Controls.ControlRegex;
+using BrokHub_RegularExpression.Controls.Buttons;
+using BrokHub_RegularExpression.Windows;
 
 namespace BrokHub_RegularExpression.Backend
 {
@@ -21,7 +23,6 @@ namespace BrokHub_RegularExpression.Backend
         #region All Private Property
         private Regex _regex;
         #endregion
-
 
         #region All Public Property
 
@@ -47,11 +48,12 @@ namespace BrokHub_RegularExpression.Backend
 
         #endregion
 
-
         #region All Private ICommand
         private ICommand _cmdReadTitle;
+        private ICommand _cmdCopyRegex;
+        private ICommand _cmdClose;
+        private ICommand _cmdHide;
         #endregion
-
 
         #region All Public ICommand
         public ICommand CmdReadTitle
@@ -61,6 +63,34 @@ namespace BrokHub_RegularExpression.Backend
                 if (_cmdReadTitle == null)
                     _cmdReadTitle = new RelayCommand(ReadTitle, CanReadTitle);
                 return _cmdReadTitle;
+            }
+        }
+        public ICommand CmdCopyRegex
+        {
+            get
+            {
+                if (_cmdCopyRegex == null)
+                    _cmdCopyRegex = new RelayCommand(CopyRegex, CanCopyRegex);
+                return _cmdCopyRegex;
+            }
+        }
+
+        public ICommand CmdClose
+        {
+            get
+            {
+                if (_cmdClose == null)
+                    _cmdClose = new RelayCommand(Close_MouseClick, CnaClose_MouseClick);
+                return _cmdClose;
+            }
+        }
+        public ICommand CmdHide
+        {
+            get
+            {
+                if (_cmdHide == null)
+                    _cmdHide = new RelayCommand(Hide_MouseClick, CanHide_MouseClick);
+                return _cmdHide;
             }
         }
 
@@ -93,13 +123,47 @@ namespace BrokHub_RegularExpression.Backend
                 foreach (var item in items)
                 {
                     //MessageBox.Show(item.SubTitle);
-                    panel.Children.Add(new ccSubRegex() { RegexSubTitle = item.SubTitle, RegexSubDescription = item.SubDescription, RegexSubSource = item.Regex });
+                    var child = new ccSubRegex() { RegexSubTitle = item.SubTitle, RegexSubDescription = item.SubDescription, RegexSubSource = item.Regex, CommandCopyRegex = CmdCopyRegex };
+                    
+                    panel.Children.Add(child);
                 }
             }
-
-
         }
 
+
+        private bool CanCopyRegex(object obj)
+        {
+            return true;
+        }
+
+        private void CopyRegex(object obj)
+        {
+            Clipboard.SetText((obj as TextBlock).Text);
+        }
+
+
+        private bool CnaClose_MouseClick(object obj)
+        {
+            return true;
+        }
+
+        private void Close_MouseClick(object obj)
+        {
+            wRegularExpression page = (obj as wRegularExpression);
+            Application.Current.Shutdown();
+            page.Close();
+        }
+
+        private bool CanHide_MouseClick(object obj)
+        {
+            return true;
+        }
+
+        private void Hide_MouseClick(object obj)
+        {
+            wRegularExpression page = (obj as wRegularExpression);
+            page.WindowState = WindowState.Minimized;
+        }
         #endregion
 
     }

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:BrokHub_RegularExpression"
              xmlns:tt="clr-namespace:BrokHub_RegularExpression.Models"
              xmlns:ba="clr-namespace:BrokHub_RegularExpression.Backend"
-             StartupUri="Windows/wRegularExpression.xaml"
+             StartupUri="Windows/wMainPage.xaml"
              >
     <Application.Resources>
         <ResourceDictionary>
