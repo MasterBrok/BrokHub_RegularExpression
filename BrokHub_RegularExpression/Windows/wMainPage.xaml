@@ -56,6 +56,9 @@
                 Height="30"
                 x:Name="stTop"
                 >
+                <StatusBar.Effect>
+                    <BlurEffect Radius="20"/>
+                </StatusBar.Effect>
                 <StatusBar.InputBindings>
                     <MouseBinding Command="{Binding CmdPopup}" MouseAction="LeftClick" CommandParameter="{Binding ElementName=wn}"/>
                 </StatusBar.InputBindings>
@@ -130,8 +133,18 @@
                 Height="400"
                 Margin="20"
                 CornerRadius="100 100 20 20"
-                Background="#E4ACD0"
+                Background="#E7D1DF"
                 >
+                <Border.Effect>
+                    <BlurEffect Radius="20"/>
+                </Border.Effect>
+                <Path Data="{StaticResource XAML}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Stretch="Uniform"
+                      Margin="20"
+                      Fill="CadetBlue"
+                      />
             </Border>
         </Grid>
     </Border>

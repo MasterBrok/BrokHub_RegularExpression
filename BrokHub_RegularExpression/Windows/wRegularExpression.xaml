@@ -67,8 +67,6 @@
                         <RowDefinition Height="9*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-
-
                     <Grid>
                         <re:ccRegex RegexTitle="{Binding Regex.Title}"
                                     RegexDescription="{Binding Regex.Description}"
@@ -76,14 +74,10 @@
                                     />
                     </Grid>
 
-
                     <StackPanel Grid.Row="1" x:Name="spSubRegexs"
                                 >
-                        <re:ccSubRegex />
+
                     </StackPanel>
-
-
-
                 </Grid>
             </ScrollViewer>
             <StackPanel  Grid.Column="2"

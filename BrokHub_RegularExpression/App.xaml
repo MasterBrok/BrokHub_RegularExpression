@@ -54,6 +54,7 @@
                 <ResourceDictionary Source="Styles/StyleControls.xaml"/>
                 <ResourceDictionary Source="Animations/AnimationMainWindow.xaml"/>
                 <ResourceDictionary Source="Animations/AnimationMenuAndMenuItem.xaml"/>
+                <ResourceDictionary Source="Paths/Paths.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
